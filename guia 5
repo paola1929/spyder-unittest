@@ -1,0 +1,9 @@
+import numpy as np
+import matplotlib.pyplot as plt
+plt.rcParams['figure.figsize'] = [16, 8]
+plt.rcParams.update({'font.size' : 14})
+
+from scipy.io import wavfile # Permite leer y grabar audio
+from IPython.display import Audio # Permite reproducir el audio
+
+# Aquí puedes agregar el resto de tu código para generar el efecto de reverberación
