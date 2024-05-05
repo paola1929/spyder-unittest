@@ -1,0 +1,20 @@
+import numpy as np
+import matplotlib.pyplot as plt
+plt.rcParams['figure.figsize'] = [16, 8]
+plt.rcParams.update({'font.size' : 14})
+
+from scipy.io import wavfile # Permite leer y grabar audio
+from IPython.display import Audio # Permite reproducir el audio
+
+# Cargar el archivo de audio
+AudioName = "Alarm01.wav" # Nombre del archivo de audio
+fs, Audiodata = wavfile.read(AudioName)
+
+# Calcular la duración del audio
+duracion = Audiodata.shape[0] / fs
+
+# Imprimir información sobre el audio
+print(f'Duración = {duracion} segundos, Frecuencia de Muestreo = {fs} [Muestras/Seg], Formato del archivo = {Audiodata.dtype}')
+Audio(x, rate=fs)
+Audio(x, rate=2*fs)
+Audio(x, rate=0.5*fs)
